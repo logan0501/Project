@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/mail-box.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Coders NewsLetter</title></head>
+<body>
+    <nav>
+        <div class="content">
+        <a href="#Home"><i class="fas fa-home"></i> Home</a>
+        <a href="#History"><i class="fas fa-history"></i> History</a>
+        <a href="#Edit"><i class="fas fa-edit"></i> Edit</a>
+        </div>
+        <div class="user-details">
+            <img class="user-img" src="images/profile-user.png" alt="" srcset="">
+            <div class="user-name">
+                <span>Loganathan</span>
+                <a href="">Log out</a>
+            </div>
+            
+
+        </div>
+    </nav>
+    <nav class="sidebar">
+        <a href="#Home"><i class="fas fa-home"></i></a>
+        <a href="#History"><i class="fas fa-history"></i></a>
+        <a href="#Edit"><i class="fas fa-edit"></i></a>
+    </nav>
+    <section class="mail-form">
+        <label for="">To</label>
+        <input type="text" name="" id="">
+        <label for="">CC</label>
+        <input type="text" name="" id="">
+         <label for="">Subject</label>
+        <input type="text" name="" id="">
+        <label for="">Time schedule</label>
+        <div class="dateandtime">
+            <form class="check-recuring" name="check-recuring">
+                <div>
+                    <input type="radio" name="timing" id="recurring" value="recurring">
+                    <label for="recurring">Recurring schedule(in secs)</label>
+                  
+                </div>
+                <div>
+                    <input type="radio" name="timing" id="weekly" value="weekly">
+                    <label for="weekly">Weekly schedule</label>
+               </div>
+               <div>
+                    <input type="radio" name="timing" id="monthly" value="monthly">
+                    <label for="monthly">Monthly schedule</label>
+          
+               </div>
+               <div>
+                    <input type="radio" name="timing" id="yearly" value="yearly">
+                    <label for="yearly">Yearly schedule</label>
+      
+                </div>
+            </form>
+              
+        </div>
+       
+        
+        <div id="reocurring-dis" class="dis" hidden>
+            <label for="time">Time(in secs)</label>
+            <input type="text" name="time" id="time">
+        </div>
+       
+        <div id="weekly-dis" class="dis" hidden>
+            <label for="week-days">Week Days</label>
+            <select name="week-days" id="week-days">
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+            </select>
+            <label for="time">Time</label>
+            <input type="time" id="week-clock">
+        </div>
+
+        <div id="monthly-dis" class="dis" hidden>
+            <label for="day">Date(1-30)</label>
+            <input type="text" name="day" id="day">
+             <label for="time">Time</label>
+            <input type="time" id="month-clock">
+      
+        </div>
+        
+        <div id="year-dis" class="dis" hidden>
+            <label for="date">Birthday (month and year):</label>
+            <input type="date" id="date" name="date">
+            <label for="time">Time</label>
+            <input type="time" id="year-clock">
+        </div>
+        
+        
+        <label for="">Mail Body</label>
+        <textarea name="mail-body" id="" cols="10" rows="100" placeholder="Write here.."></textarea>
+        <button type="submit">Send Mail</button>
+    </section>
+
+    <section class="mail-form recipient">
+        <h2>Recipients</h2>
+        <div class="addnew">
+            <input type="email" name="addnew" id="addtext">
+            <button id="btnaddnew">+</button>
+        </div>
+
+
+
+        <form id="recips" name="recips">
+      
+            
+        </form>
+        <div class="rec">
+           <input type="checkbox" name="email" id="emailid" hidden>
+           <label for="emailid">logan@gmail.com</label>
+        </div>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
