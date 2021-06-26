@@ -1,4 +1,4 @@
-// const time = document.getElementById('')
+//Getting components for dom operations
 const radios = document.forms["check-recuring"].elements["timing"];
 const checkArearec = document.getElementById('reocurring-dis')
 const weekday = document.querySelector('#weekly-dis');
@@ -10,6 +10,12 @@ const submitbtn = document.getElementById('submit');
 
 var recipients;
 
+
+//form submition dom
+
+const toIP = document.getElementById('to');
+const ccIP = document.getElementById('cc');
+const subject = document.getElementById('subject')
 
 
 for(radio in radios) {
@@ -47,7 +53,7 @@ for(radio in radios) {
 addbtn.addEventListener('click',()=>{
     var email = document.getElementById('addtext').value;
 
-    if(email!='' && String(email).match('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$')){
+    if(email!='' && String(email).match("[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+(\.[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+)*@([a-zA-Z0-9_][-a-zA-Z0-9_]*(\.[-a-zA-Z0-9_]+)*\.([cC][oO][mM]))(:[0-9]{1,5})?")){
         var div = document.createElement('span');
        div.className='rec';
         var check = document.createElement('input');
@@ -59,7 +65,7 @@ addbtn.addEventListener('click',()=>{
         
         var label = document.createElement('label');
         
-        label.for = email
+        label.for = email;
         label.innerHTML =email;
         
         div.append(check,label)

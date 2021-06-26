@@ -35,100 +35,103 @@
         <a href="#Edit"><i class="fas fa-edit"></i></a>
     </nav>
 
-    <!--  -->
-    <section class="mail-form">
-        <label for="">To</label>
-        <input type="text" name="" id="">
-        <label for="">CC</label>
-        <input type="text" name="" id="">
-         <label for="">Subject</label>
-        <input type="text" name="" id="">
-        <label for="">Time schedule</label>
-        <div class="dateandtime">
-            <form class="check-recuring" name="check-recuring">
-                <div>
-                    <input type="radio" name="timing" id="recurring" value="recurring">
-                    <label for="recurring">Recurring schedule(in secs)</label>
-                  
-                </div>
-                <div>
-                    <input type="radio" name="timing" id="weekly" value="weekly">
-                    <label for="weekly">Weekly schedule</label>
-               </div>
-               <div>
-                    <input type="radio" name="timing" id="monthly" value="monthly">
-                    <label for="monthly">Monthly schedule</label>
-          
-               </div>
-               <div>
-                    <input type="radio" name="timing" id="yearly" value="yearly">
-                    <label for="yearly">Yearly schedule</label>
-      
-                </div>
-            </form>
+    <!-- Form -->
+    <div class="body-div">
+        <section class="mail-form">
+            <label for="">To</label>
+            <input type="text" name="tp" id="to">
+            <label for="">CC</label>
+            <input type="text" name="cc" id="cc">
+             <label for="">Subject</label>
+            <input type="text" name="sub" id="sub">
+            <label for="">Time schedule</label>
+            <div class="dateandtime">
+                <form class="check-recuring" name="check-recuring">
+                    <div>
+                        <input type="radio" name="timing" id="recurring" value="recurring">
+                        <label for="recurring">Recurring schedule(in secs)</label>
+                      
+                    </div>
+                    <div>
+                        <input type="radio" name="timing" id="weekly" value="weekly">
+                        <label for="weekly">Weekly schedule</label>
+                   </div>
+                   <div>
+                        <input type="radio" name="timing" id="monthly" value="monthly">
+                        <label for="monthly">Monthly schedule</label>
               
-        </div>
-       
-        
-        <div id="reocurring-dis" class="dis" hidden>
-            <label for="time">Time(in secs)</label>
-            <input type="text" name="time" id="time">
-        </div>
-       
-        <div id="weekly-dis" class="dis" hidden>
-            <label for="week-days">Week Days</label>
-            <select name="week-days" id="week-days">
-                <option value="sunday">Sunday</option>
-                <option value="monday">Monday</option>
-                <option value="tuesday">Tuesday</option>
-                <option value="wednesday">Wednesday</option>
-                <option value="thursday">Thursday</option>
-                <option value="friday">Friday</option>
-                <option value="saturday">Saturday</option>
-            </select>
-            <label for="time">Time</label>
-            <input type="time" id="week-clock">
-        </div>
-
-        <div id="monthly-dis" class="dis" hidden>
-            <label for="day">Date(1-30)</label>
-            <input type="text" name="day" id="day">
-             <label for="time">Time</label>
-            <input type="time" id="month-clock">
-      
-        </div>
-        
-        <div id="year-dis" class="dis" hidden>
-            <label for="date">Birthday (month and year):</label>
-            <input type="date" id="date" name="date">
-            <label for="time">Time</label>
-            <input type="time" id="year-clock">
-        </div>
-        
-        
-        <label for="">Mail Body</label>
-        <textarea name="mail-body" id="" cols="10" rows="100" placeholder="Write here.."></textarea>
-        <button type="submit" id="submit" >Send Mail</button>
-    </section>
-
-    
-    <section class="mail-form recipient">
-        <h2>Recipients</h2>
-        <div class="addnew">
-            <input type="email" name="addnew" id="addtext" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
-            <button id="btnaddnew">+</button>
-        </div>
-
-
-
-        <form id="recips" name="recips">
-      
+                   </div>
+                   <div>
+                        <input type="radio" name="timing" id="yearly" value="yearly">
+                        <label for="yearly">Yearly schedule</label>
+          
+                    </div>
+                </form>
+                  
+            </div>
+           
             
-        </form>
+            <div id="reocurring-dis" class="dis" hidden>
+                <label for="time">Time(in secs)</label>
+                <input type="text" name="time" id="time">
+            </div>
+           
+            <div id="weekly-dis" class="dis" hidden>
+                <label for="week-days">Week Days</label>
+                <select name="week-days" id="week-days">
+                    <option value="sunday">Sunday</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                </select>
+                <label for="time">Time</label>
+                <input type="time" id="week-clock">
+            </div>
+    
+            <div id="monthly-dis" class="dis" hidden>
+                <label for="day">Date(1-30)</label>
+                <input type="text" name="day" id="day">
+                 <label for="time">Time</label>
+                <input type="time" id="month-clock">
+          
+            </div>
+            
+            <div id="year-dis" class="dis" hidden>
+                <label for="date">Birthday (month and year):</label>
+                <input type="date" id="date" name="date">
+                <label for="time">Time</label>
+                <input type="time" id="year-clock">
+            </div>
+            
+            
+            <label for="">Mail Body</label>
+            <textarea name="mail-body" id="" cols="10" rows="100" placeholder="Write here.."></textarea>
+            <button type="submit" id="submit" >Send Mail</button>
+        </section>
+    
         
-        
-    </section>
-
+        <section class="mail-form recipient">
+            <h2>Recipients</h2>
+            <div class="addnew">
+                <input type="email" name="addnew" id="addtext" required  pattern="[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+(\.[-a-zA-Z0-9~!$%^&amp;*_=+}{'?]+)*@([a-zA-Z0-9_][-a-zA-Z0-9_]*(\.[-a-zA-Z0-9_]+)*\.([cC][oO][mM]))(:[0-9]{1,5})?" >
+                <button id="btnaddnew">+</button>
+            </div>
+    
+    
+                <div class="rec-dis">
+                    <form id="recips" name="recips">
+                    </form>
+                    
+                </div>
+           
+            
+        </section>
+    
+    </div>
+   
     <script src="script.js"></script>
 </body>
 </html>
