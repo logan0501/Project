@@ -42,7 +42,7 @@ body{
     justify-self: flex-start;
     font-weight: 800;
 }
-.form button{
+.form input[type='button']{
     background-color: #053742;
     width: 100%;
     margin-top: 20px;
@@ -55,7 +55,7 @@ body{
     font-weight: 400;
     letter-spacing: 2px;
 }
-.form button:hover{
+.form input[type='button']:hover{
     background-color: white;
     color: black;
 }

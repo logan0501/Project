@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Coders NewsLetter</title></head>
 <body>
+    <!-- Nav Bar -->
     <nav>
         <div class="content">
         <a href="#Home"><i class="fas fa-home"></i> Home</a>
@@ -26,11 +27,15 @@
 
         </div>
     </nav>
+
+    <!-- Sidebar -->
     <nav class="sidebar">
         <a href="#Home"><i class="fas fa-home"></i></a>
         <a href="#History"><i class="fas fa-history"></i></a>
         <a href="#Edit"><i class="fas fa-edit"></i></a>
     </nav>
+
+    <!--  -->
     <section class="mail-form">
         <label for="">To</label>
         <input type="text" name="" id="">
@@ -103,13 +108,14 @@
         
         <label for="">Mail Body</label>
         <textarea name="mail-body" id="" cols="10" rows="100" placeholder="Write here.."></textarea>
-        <button type="submit">Send Mail</button>
+        <button type="submit" id="submit" >Send Mail</button>
     </section>
 
+    
     <section class="mail-form recipient">
         <h2>Recipients</h2>
         <div class="addnew">
-            <input type="email" name="addnew" id="addtext">
+            <input type="email" name="addnew" id="addtext" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
             <button id="btnaddnew">+</button>
         </div>
 
@@ -119,10 +125,7 @@
       
             
         </form>
-        <div class="rec">
-           <input type="checkbox" name="email" id="emailid" hidden>
-           <label for="emailid">logan@gmail.com</label>
-        </div>
+        
         
     </section>
 

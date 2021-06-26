@@ -119,6 +119,9 @@ input[type='checkbox']{
 .rec label{
     display: inline;
 }
+#recips{
+    margin-top: 20px;
+}
 @media screen and (max-width:1000px) {
     nav{
         display: flex;

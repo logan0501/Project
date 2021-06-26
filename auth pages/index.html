@@ -16,23 +16,23 @@
         
         <img src="./images/Mail.svg" alt="">
         <div class="form">
-            <form action="get">
+            <form>
                 <h3>CREATE AN ACCOUNT</h3>
                 <div>
-                    <label for="username">UserName</label>
+                <label for="username">UserName</label>
                 <input type="text" name="username" id="username">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
                 <label for="">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" minlength="6">
                
                 </div>
-                 <button>LOGIN</button>
+                 <input type="button" value="LOGIN" id="loginbtn">
                 <p href="">Already Have an Account? <span><a href="">Register</a></span></p>
             </form>
         </div>
     </div>
 
-
+<script src="index.js"></script>
 </body>
 </html>

@@ -6,6 +6,11 @@ const monthday = document.querySelector('#monthly-dis');
 const yearday = document.querySelector('#year-dis')
 const reciptarea = document.querySelector('#recips')
 const addbtn = document.getElementById('btnaddnew');
+const submitbtn = document.getElementById('submit');
+
+var recipients;
+
+
 
 for(radio in radios) {
     radios[radio].onclick = function() {
@@ -42,20 +47,37 @@ for(radio in radios) {
 addbtn.addEventListener('click',()=>{
     var email = document.getElementById('addtext').value;
 
-    if(email!=null){
-        var div = document.createElement('div');
+    if(email!='' && String(email).match('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$')){
+        var div = document.createElement('span');
        div.className='rec';
         var check = document.createElement('input');
-        check.setAttribute('type','check')
+        check.setAttribute('type','checkbox')
         check.setAttribute('value',email);
+        check.setAttribute('id',email);
+        check.setAttribute('name','recip-email');
         check.id=email;
         
-        var label = document.createAttribute('p');
+        var label = document.createElement('label');
         
-        label.textContent = email
-        div.appendChild(check)
-        div.appendChild(label)
+        label.for = email
+        label.innerHTML =email;
+        
+        div.append(check,label)
+       
 
         reciptarea.appendChild(div);
     }
+})
+
+
+submitbtn.addEventListener('click',()=>{
+   recipients=document.getElementsByName('recip-email');
+    var checkedboxes=[];
+    for (var i=0; i<recipients.length; i++) {
+        
+        if (recipients[i].checked) {
+           checkedboxes.push(recipients[i].value);
+        }
+     }
+     console.log(checkedboxes[0]);
 })
